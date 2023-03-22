@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class EmpService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+
+  emp(){
+    let url = "http://localhost:8000/employees";
+    return this.http.get<any>(url);
+  }
 }

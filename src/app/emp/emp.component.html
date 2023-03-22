@@ -1,1 +1,19 @@
-<p>emp works!</p>
+<div>
+  <table>
+    <thead>
+
+      <th>#</th>
+      <th>Name</th>
+      <th>City</th>
+
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.city}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
