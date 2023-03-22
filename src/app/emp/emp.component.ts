@@ -27,4 +27,8 @@ export class EmpComponent  implements OnInit{
     })
   }
 
+  show(){
+    
+  }
+
 }

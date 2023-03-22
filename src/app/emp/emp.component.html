@@ -1,11 +1,22 @@
-<div>
-  <table>
-    <thead>
 
+<h2 class="text-center mt-5">Employees</h2>
+
+<div class="sContent m-5">
+  <input type="search" class="search">
+  <button>Keresés</button>
+</div>
+
+<div class="rContent m-5" *ngIf="show()">
+  <input type="text" disabled>
+</div>
+
+
+<div class="tableCont">
+  <table class="table">
+    <thead  class="text-center">
       <th>#</th>
       <th>Name</th>
       <th>City</th>
-
     </thead>
 
     <tbody>
