@@ -1,12 +1,16 @@
 
 <h2 class="text-center mt-5">Employees</h2>
 
-<div class="sContent m-5">
-  <input type="search" class="search">
-  <button>Keresés</button>
-</div>
+<!-- <div class="sContent m-5 text-center">
+  <form action="" > -->
+    <div class="container">
+      <input type="search"  class="search form-control" [(ngModel)] ="actualCity">
+    </div>
+    <!-- <button>Keresés</button>
+  </form>
+</div> -->
 
-<div class="rContent m-5" *ngIf="show()">
+<div class="rContent m-5 text-center" *ngIf="show()">
   <input type="text" disabled>
 </div>
 
@@ -20,7 +24,7 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let emp of employees">
+      <tr *ngFor="let emp of employees | empfilter:actualCity">
         <td>{{emp.id}}</td>
         <td>{{emp.name}}</td>
         <td>{{emp.city}}</td>

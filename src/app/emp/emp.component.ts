@@ -8,6 +8,7 @@ import { EmpService } from '../service/emp.service';
 })
 export class EmpComponent  implements OnInit{
 
+  actualCity!:string ;
   constructor(private api:EmpService){}
 
   ngOnInit(): void {
@@ -28,7 +29,7 @@ export class EmpComponent  implements OnInit{
   }
 
   show(){
-    
+
   }
 
 }
